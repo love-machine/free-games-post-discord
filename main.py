@@ -1,4 +1,5 @@
 import requests
+import os
 class jeu:
     def __init__(self):
         self.url="https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions?locale=fr&country=FR&allowCountries=FR"
