@@ -3,7 +3,7 @@ class jeu:
     def __init__(self):
         self.url="https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions?locale=fr&country=FR&allowCountries=FR"
         self.image=""
-        self.webook="https://discord.com/api/webhooks/1492185961776550068/kAzbOeRIxjDNGIke2hs7jD53gNwsQh5-6SOnIp_ELO7Wq1ooK4TZNtqkGPz8rkO86PnG"
+        self.webook = os.getenv("DISCORD_WEBHOOK")
     def test(self):
         re=requests.get(self.url)
         print(re.status_code)
