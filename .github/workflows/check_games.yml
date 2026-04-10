@@ -1,0 +1,20 @@
+name: Verif Jeux Gratuits
+on:
+  schedule:
+    # C'est du format "CRON" (Minutes Heures Jour Mois JourSemaine)
+    # 0 15 * * 4 = Tous les jeudis à 15h UTC (17h en France)
+    - cron: '0 15 * * 4' 
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Installer les outils
+        run: pip install requests
+      - name: Lancer le robot
+        run: python main.py
