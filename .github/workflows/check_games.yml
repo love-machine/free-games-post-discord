@@ -4,6 +4,7 @@ on:
     # C'est du format "CRON" (Minutes Heures Jour Mois JourSemaine)
     # 0 15 * * 4 = Tous les jeudis à 15h UTC (17h en France)
     - cron: '0 15 * * 4' 
+  workflow_dispatch:
 
 jobs:
   run-script:
